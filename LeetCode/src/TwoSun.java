@@ -3,12 +3,12 @@ public class TwoSun {
 
     }
 
-    public static int[] twoSun(int[] nums, int target){
+    public static int[] twoSun(int[] sorted, int target){
 
         int[] vetor = new int[2];
-        for (int i = 0; i < nums.length-1; i++) {
-            for (int j = i+1; j < nums.length-1; j++) {
-                int soma = nums[i] + nums[j];
+        for (int i = 0; i < sorted.length-1; i++) {
+            for (int j = i+1; j < sorted.length-1; j++) {
+                int soma = sorted[i] + sorted[j];
 
                 if(soma == target){
                     vetor[0] = i;
